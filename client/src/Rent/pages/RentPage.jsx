@@ -64,6 +64,12 @@ const DetailRentPage = (props) => {
     if(selected.image){
         image = selected.image;
     }
+    const styleme={
+        
+        width:'30%',
+        paddingtop:10
+     
+    }
 
     return(        
         <Layout>
@@ -75,7 +81,7 @@ const DetailRentPage = (props) => {
                     isLoading 
                     ? <PreLoader />
                     : 
-                    <div className='item-cars' >
+                    <div className='item-cars' style={styleme} >
                         <p className='name'>{selected.name}<span> {selected.model}</span></p>
                         <div className='options'>
                             <p style={{textTransform:"capitalize"}} className='car-type'><span><MdDirectionsCar /></span> {selected.carType}</p>

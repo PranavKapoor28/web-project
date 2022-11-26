@@ -3,12 +3,12 @@ import React, { createContext, useState } from 'react';
 export const themes = { 
     
     light: {
-        backgroundColor: '#8CD3A7',
-        color: '#010848'
+        backgroundColor: '#FFFFFF',
+        color: '#2F3C7E'
     },
     dark: {
-        backgroundColor: '#346642',
-         color: '#FFFFFF'
+        backgroundColor: '#2F3C7E',
+        color: '#FBEAEB'
     }
 }
 

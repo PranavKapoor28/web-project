@@ -1,8 +1,9 @@
 .order-card {
     position: relative;
     display: flex;
-    flex-wrap: wrap;
-    width: 650px;
+    // flex-flow: column;
+    // flex-wrap: wrap;
+    width: 80%;
     margin-bottom: 55px;
     .extras-btn {
         position: absolute;

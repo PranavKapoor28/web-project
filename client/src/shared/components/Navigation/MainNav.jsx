@@ -27,7 +27,7 @@ const MainNav = () => {
     return (
         <Fragment>
             <SideBarMenu toggleSideBar={toggleSideBar} />  
-            {isLoggedIn && <AuthHeader />}   
+            
             <header className='main-header'>  
                 <div className='logo-field'>
                     <div className='menu' onClick={onToggleHandler}>
@@ -35,7 +35,7 @@ const MainNav = () => {
                         <p />
                         <p />
                     </div>                           
-                    <h1 className='logo'>Logo</h1>
+                    <h1 className='logo'>AirBnb Car</h1>
                 </div>
                 <div className='company-ident'>
                     {
@@ -53,6 +53,7 @@ const MainNav = () => {
                     </button>                                                              
                 </div>            
             </header>
+            {isLoggedIn && <AuthHeader />}   
         </Fragment>
     )
 };

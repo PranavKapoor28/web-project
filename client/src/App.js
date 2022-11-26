@@ -21,7 +21,7 @@ function App() {
     <AuthContextProvider>
       <ThemeContextProvider>
             <Router>
-                  <MainNav />
+            <MainNav />
                   <Switch>             
                     <Route exact path='/' component={LandingPage} />
                     <Route path='/auth/reset/:token' component={ResetForm} />
@@ -33,6 +33,7 @@ function App() {
                     <Route path='/rent/:id' component={RentPage} />
                     <Redirect to='/'/>
                   </Switch>
+                 
             </Router>
       </ThemeContextProvider>
     </AuthContextProvider>

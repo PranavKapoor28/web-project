@@ -104,6 +104,8 @@ const resetPassword = async (req, res) => {
     res.status(500).send({ msg: "Server error, can not update user" });
   }
 
+
+  
   try {
     sendPasswordResetEmail({
       to: req.body.email,

@@ -20,7 +20,7 @@ const SearchForm = (props) => {
                     {
                         props.onSearch 
                         ? <button className='clear-search' onClick={props.onSearchClear}>clear</button>
-                        : <input type='submit' value='search' />
+                        : <input type='submit' value='search' style = {{backgroundColor: 'white'}} />
                     }                   
             </form>
         </div>

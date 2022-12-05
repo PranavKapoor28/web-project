@@ -32,7 +32,7 @@ const sendEmail = ({
         <h4> Dear ${firstName} ${lastName}</h4>
         <p>You have rented ${carName} ${carModel}</p>
         <p>for total ${totalDays} days - starting from ${startDate} to ${endDate}</p>
-        <h3>Your total rent price is ${totalPrice} Euro</h3>
+        <h3>Your total rent price is ${totalPrice} Dollars</h3>
         </br>
         <P>We are very happy, that you choose us</p>`,
       };

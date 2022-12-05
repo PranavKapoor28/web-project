@@ -17,7 +17,7 @@ const SingleFleetItem = (props) => {
     <div className="item-cars">
       <img onClick={onToRentMove} src={props.image} alt="car"  />
       <p className="name">
-        {props.name}
+        {props.name}<br></br>
         <span> {props.model}</span>
       </p>
       <div className="options">

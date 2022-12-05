@@ -28,12 +28,12 @@ const MainNav = () => {
         <Fragment>
             <SideBarMenu toggleSideBar={toggleSideBar} />  
             
-            <header className='main-header'>  
+            <header className='main-header' style={currentTheme }>  
                 <div className='logo-field'>
-                    <div className='menu' onClick={onToggleHandler}>
-                        <p />
-                        <p />
-                        <p />
+                    <div className='menu' onClick={onToggleHandler} >
+                        <p style={{backgroundColor: currentTheme.color}}/> 
+                        <p style={{backgroundColor: currentTheme.color}}/>
+                        <p style={{backgroundColor: currentTheme.color}}/>
                     </div>                           
                     <h1 className='logo'>AirBnb Car</h1>
                 </div>
@@ -42,7 +42,7 @@ const MainNav = () => {
                         isLoggedIn 
                         ? <div className='auth-btn' onClick={onLogout}>Logout</div>
                         : <div className='auth-btn'>
-                            <NavLink to='/auth'>Login</NavLink></div>
+                            <NavLink to='/auth' style={{color: currentTheme.color}}>Login</NavLink></div>
                     } 
                     <button className='bulb' onClick={toggleTheme}>
                             {

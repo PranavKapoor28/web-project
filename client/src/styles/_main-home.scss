@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
   .home-title{
         text-align: center;
         padding-top: 30px;
@@ -7,7 +6,7 @@
         text-transform: uppercase;
         font-size: 45px;
         letter-spacing: 1.5px;
-        font-family: 'Kalam', cursive;
+        font-family: 'Source Sans Pro', sans-serif;
         font-weight: 700;
         //  background-color: white;
         margin: 0%;
@@ -46,7 +45,11 @@
     .offers-btn{
         text-align: center;
         margin: auto;
-        border: 1px solid black;
+        border-bottom: 4px solid black;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+        border-right: 1px solid black;
+        border-left: 1px solid black;
         width: 220px;
         padding: 12px;
         font-size: 14px;
@@ -54,7 +57,8 @@
         cursor: pointer;
         a {
             text-decoration: none;
-            color: black;
+            // color: black;
+            color: inherit !important ;
         }
     }
     .slogan {

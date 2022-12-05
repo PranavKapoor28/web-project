@@ -11,7 +11,9 @@ import suv from '../assets/vw-touran.png'
 import sedan from '../assets/bmw-1er.png'
 import coupe from '../assets/mb-e53.png'
 
+
 const LandingPage = () => {
+  
 
     const [offers, setOffers] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -66,7 +68,7 @@ const LandingPage = () => {
                     ? <PreLoader />
                     : <FleetList fleet={offers} />
             }
-            <p className='offers-btn'><NavLink to='/fleet'>Check our other offers</NavLink></p>
+            <p className='offers-btn'><NavLink to='/fleet'  >Check our other offers</NavLink></p>
             <p className='slogan'>Don't dream it, drive it</p>
             <p ref={el => (line = el)} className='line' />
             <section className='sorting-section'>

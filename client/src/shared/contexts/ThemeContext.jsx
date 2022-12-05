@@ -4,12 +4,17 @@ export const themes = {
     
     light: {
         backgroundColor: '#FFFFFF',
-        color: '#2F3C7E'
+        color: '#2F3C7E',
+       
+       
     },
     dark: {
-        backgroundColor: '#2F3C7E',
-        color: '#FBEAEB'
+        backgroundColor: '#1B263B',
+        color: '#FBEAEB',
+        
+
     }
+    
 }
 
 export const ThemeContext = createContext(themes.light);

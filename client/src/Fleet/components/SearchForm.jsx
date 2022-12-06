@@ -8,8 +8,11 @@ const SearchForm = (props) => {
     const onSubmitNameHandler = (e) => {
         const convName = name.toLocaleLowerCase()
         e.preventDefault();
+        
         props.onSubmitNameHandler(convName);
+        console.log(name);
         setName('');
+        
     };
 
     return(
@@ -19,7 +22,7 @@ const SearchForm = (props) => {
                     required onChange={(e) => setName(e.target.value)} />
                     {
                         props.onSearch 
-                        ? <button className='clear-search' onClick={props.onSearchClear}>clear</button>
+                        ? <button className='clear-search' onClick={props.onSearchClear} style = {{backgroundColor: 'white'}}>clear</button>
                         : <input type='submit' value='search' style = {{backgroundColor: 'white'}} />
                     }                   
             </form>

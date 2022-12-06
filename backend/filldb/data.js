@@ -52,7 +52,7 @@ const carData = [
     price: "1399.99",
     qt: "10",
     image:
-      "https://media.istockphoto.com/id/517273250/photo/2016-aston-martihttps://media.ed.edmunds-media.com/aston-martin/vantage/2021/oem/2021_aston-martin_vantage_convertible_roadster_fq_oem_1_1600.jpgn-db11.jpg?s=612x612&w=0&k=20&c=F1Gd0H7lGsuepVnWKIBQikJJU-CsMo4Sw-WQS-7xcFs=",
+      "https://media.ed.edmunds-media.com/aston-martin/vantage/2021/oem/2021_aston-martin_vantage_convertible_roadster_fq_oem_1_815.jpg",
   },
   {
     name: "Audi Q8",

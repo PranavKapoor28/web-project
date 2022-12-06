@@ -34,7 +34,7 @@ const SideBarMenu = (props) => {
             <li><NavLink exact to='/'  style={{color: currentTheme.color}}>Home</NavLink></li>
             <li><NavLink to='/fleet' style={{color: currentTheme.color}}>Fleet</NavLink></li>
             {
-                isLoggedIn && <li><NavLink to={`/my-orders/${userId}`}>My Orders</NavLink></li>
+                isLoggedIn && <li><NavLink style={{color: currentTheme.color}} to={`/my-orders/${userId}` }>My Orders</NavLink></li>
             }          
         </ul>
     )

@@ -82,15 +82,18 @@ const getOfferCars = async (req, res) => {
 //Get car list by searched name,model or car type
 const getCarByName = async (req, res) => {
   let cars;
+  const str2 = req.params.name.charAt(0).toUpperCase() + req.params.name.slice(1);
+  console.log("here");
   try {
     cars = await Car.find({
       $or: [
-        { name: req.params.name },
-        { model: req.params.name },
-        { carType: req.params.name },
+        { name:  str2 },
+        { model:str2 },
+        { carType: str2 },
       ],
-      qt: { $gt: 0 },
+      qt: { $gt: 1 },
     }).sort({ price: 1 });
+    console.log(req.params.name);
   } catch (err) {
     console.err(err.message);
     res.status(500).send({ msg: "Can not find cars with that name" });

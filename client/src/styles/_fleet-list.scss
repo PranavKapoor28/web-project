@@ -5,12 +5,18 @@
     width: 950px;
     margin: auto;
     width: 80%;
+    
    
 }
 
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
     .list-autos { 
-       width: 80%;
+       width: 100%;
+       display: flex;
+       flex-flow: column;
+       justify-content: center;
+       align-items: center;
+      
     }
 }

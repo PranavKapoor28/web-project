@@ -17,6 +17,7 @@ const FleetSearchPage = () => {
     let tl = useRef();
     let searchTitle = useRef(null);
     const name = useParams().name;
+    console.log(name);
 
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -31,8 +32,10 @@ const FleetSearchPage = () => {
         setIsLoading(true)
         axios.get(`/fleet/sort/${name}`)
              .then(res => {
+                
                 setIsLoading(false);
-                setSearched(res.data.cars)
+                setSearched(res.data.cars);
+                console.log(res);
              }).catch(err => {
                 setIsLoading(false);
                 console.log(err)

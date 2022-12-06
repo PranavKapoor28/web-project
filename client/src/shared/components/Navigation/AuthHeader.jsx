@@ -12,7 +12,7 @@ const AuthHeader = () => {
 
     return(
         <div className='auth-header' style={currentTheme}>
-            <p><span>{time}</span>, {name}</p>
+            <p style={{color: currentTheme.color}}><span>{time}</span>, {name}</p>
         </div>
     )
 }

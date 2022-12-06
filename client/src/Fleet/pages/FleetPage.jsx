@@ -63,8 +63,10 @@ const FleetPage = () => {
     //Search for different results 
     const onSubmitNameHandler = useCallback((name) => {
         setIsLoading(true)
+        
         axios.get(`/fleet/sort/${name}`)
              .then(res => {
+               
                 setIsLoading(false);
                 setSearch(res.data.cars);
                 setOnSearch(true);

@@ -3195,7 +3195,7 @@ clone-deep@^4.0.1:
 
 clsx@^1.1.1:
   version "1.2.1"
-  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.2.1.tgz#0ddc4a20a549b59c93a4116bb26f5294ca17dc12"
+  resolved "https://registry.npmjs.org/clsx/-/clsx-1.2.1.tgz"
   integrity sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==
 
 co@^4.6.0:
@@ -8974,7 +8974,7 @@ prompts@^2.0.1:
 
 prop-types@15.7.2:
   version "15.7.2"
-  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
+  resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
   dependencies:
     loose-envify "^1.4.0"
@@ -9330,19 +9330,19 @@ react-scripts@3.4.1:
 
 react-stripe-checkout@^2.6.3:
   version "2.6.3"
-  resolved "https://registry.yarnpkg.com/react-stripe-checkout/-/react-stripe-checkout-2.6.3.tgz#3173a870b04e5a3c321a06d24cd53c6030111c45"
+  resolved "https://registry.npmjs.org/react-stripe-checkout/-/react-stripe-checkout-2.6.3.tgz"
   integrity sha512-lnsCaAdlmwPGGMbQoI8FXtQUgEm+ktzPZ/ipAw4j0HYf80kef7CivGx6QitmgEn99/aa5hI/dmVXwfVZW/Mzfg==
 
 react-stripe-elements@^6.1.2:
   version "6.1.2"
-  resolved "https://registry.yarnpkg.com/react-stripe-elements/-/react-stripe-elements-6.1.2.tgz#bd277e86d0b868a6fac9358df09e0d38149b6736"
+  resolved "https://registry.npmjs.org/react-stripe-elements/-/react-stripe-elements-6.1.2.tgz"
   integrity sha512-gYbYhVVJm3Woc84TgmuiqUj44rI/BZGUVUTTmS0U6kZyZa5fYMPlKKIsVZdQZufQ7Ab4BXLO2LSxBlGY0s2jew==
   dependencies:
     prop-types "15.7.2"
 
 react-toastify@9.0.3:
   version "9.0.3"
-  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-9.0.3.tgz#8e6d22651c85cb584c5ebd0b5e2c3bf0d7ec06ee"
+  resolved "https://registry.npmjs.org/react-toastify/-/react-toastify-9.0.3.tgz"
   integrity sha512-0QZJk0SqYBxouRBGCFU3ymvjlwimRRhVH7SzqGRiVrQ001KSoUNbGKx9Yq42aoPv18n45yJzEFG82zqv3HnASg==
   dependencies:
     clsx "^1.1.1"

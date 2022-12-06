@@ -55,7 +55,7 @@ const LandingPage = () => {
         <Layout>
 
 <div className='bodyContent'>
-            <div className='topContainer'>
+            {/* <div className='topContainer'>
                 
             <video className='video-container' autoPlay muted loop id="video" >
             <source src={myVideo} type="video/mp4"  />
@@ -67,7 +67,7 @@ const LandingPage = () => {
                 <p ref={el => (subtitle = el)} className='sub-title'>Rent, Drive Carefree</p>
                
             </div>
-            </div>
+            </div> */}
 
         
             <div className='headingtop' style={{backgroundImage: `url(${currentTheme.imagePeecheki})`}}>
@@ -82,15 +82,15 @@ const LandingPage = () => {
             </div>
 
 
-            <p ref={el => (line = el)} className='line' />
+            <p ref={el => (line = el)} className='line' style={{backgroundColor:currentTheme.cardBorderBottomColor}} />
             {
                 isLoading
                     ? <PreLoader />
                     : <FleetList fleet={offers} />
             }
-            <p className='offers-btn'><NavLink to='/fleet'  >Check our other offers</NavLink></p>
+            <p className='offers-btn' style={{ borderBottomColor:currentTheme.cardBorderBottomColor}}><NavLink to='/fleet'  >Check our other offers</NavLink></p>
             <p className='slogan'>Don't dream it, drive it</p>
-            <p ref={el => (line = el)} className='line' />
+            <p ref={el => (line = el)} className='line' style={{backgroundColor:currentTheme.cardBorderBottomColor}}/>
             <section className='sorting-section'>
                 <CarInforCard src={coupe} alt={"coupe"} clicked={onSearchtHandler} name={'coupe'} text={'Check our coupes'} />
                 <CarInforCard src={sedan} alt={"sedan"} clicked={onSearchtHandler} name={'sedan'} text={'Check our sedans'} />

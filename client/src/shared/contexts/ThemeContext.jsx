@@ -8,13 +8,19 @@ export const themes = {
     light: {
         backgroundColor: '#FFFFFF',
         color: '#2F3C7E',
-       imagePeecheki: img2
+       imagePeecheki: img2,
+       cardColor:  "rgba(215, 215, 215, 0.318)",
+       cardFontColor: '#2F3C7E',
+       cardBorderBottomColor:'black',
        
     },
     dark: {
         backgroundColor: 'black',
         color: '#FBEAEB',
-        imagePeecheki: img1
+        imagePeecheki: img1,
+        cardColor: "white",
+        cardFontColor: '#2F3C7E',
+        cardBorderBottomColor:'red',
         
 
     }

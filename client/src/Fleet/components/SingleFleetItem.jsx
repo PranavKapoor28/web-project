@@ -1,5 +1,6 @@
-import React from "react";
+import React, {   useContext  } from "react";
 import { NavLink, useHistory } from "react-router-dom";
+import { ThemeContext, themes} from '../../shared/contexts/ThemeContext';
 
 import { MdDirectionsCar, MdAirlineSeatReclineNormal } from "react-icons/md";
 import { GoGear } from "react-icons/go";
@@ -7,14 +8,15 @@ import { IoMdSnow } from "react-icons/io";
 
 const SingleFleetItem = (props) => {
   const history = useHistory();
-
+  const { currentTheme, toggleTheme } = useContext(ThemeContext);
+  console.log(currentTheme);
   const onToRentMove = () => {
     history.push(`/rent/${props.id}`);
   };
   console.log(props.image);
 
   return (
-    <div className="item-cars">
+    <div className="item-cars" style={{backgroundColor:currentTheme.cardColor, color:currentTheme.cardFontColor, borderBottomColor:currentTheme.cardBorderBottomColor}}>
       <img onClick={onToRentMove} src={props.image} alt="car"  />
       <p className="name">
         {props.name}<br></br>

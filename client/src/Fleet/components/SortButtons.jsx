@@ -1,7 +1,10 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState,useContext } from 'react'
 import { IoIosArrowDropup, IoIosArrowDropdown } from 'react-icons/io'
+import { ThemeContext, themes} from '../../shared/contexts/ThemeContext';
 
 const SortButtons = (props) => {
+    const { currentTheme, toggleTheme } = useContext(ThemeContext);
+    console.log(currentTheme);
 
     const [isUp, setIsUp] = useState(false);
 
@@ -18,13 +21,13 @@ const SortButtons = (props) => {
     return(
         <Fragment>
             {
-                isUp ?  <div className='sort-arrow'>
+                isUp ?  <div className='sort-arrow' style={{color:currentTheme.cardBorderBottomColor}}>
                             <button onClick={toLowHandler}> 
-                            <span>Price order High-to-Low</span><IoIosArrowDropdown /></button>
+                            <span style={{color:currentTheme.cardBorderBottomColor}}>Price order High-to-Low</span><IoIosArrowDropdown /></button>
                         </div>
                     :   <div className='sort-arrow'>              
                             <button onClick={toHightHandler}> 
-                            <span>Price order Low-to-High</span><IoIosArrowDropup /></button>
+                            <span style={{color:currentTheme.cardBorderBottomColor}}>Price order Low-to-High</span><IoIosArrowDropup /></button>
                         </div>
             }         
         </Fragment>

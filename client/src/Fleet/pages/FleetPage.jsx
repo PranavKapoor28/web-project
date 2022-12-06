@@ -1,6 +1,7 @@
-import React, { useEffect, useState, useRef, useCallback, Fragment, useReducer } from 'react';
+import React, { useEffect, useState, useRef, useCallback, Fragment, useReducer , useContext} from 'react';
 import axios from '../../axios';
 import gsap from 'gsap';
+import { ThemeContext, themes} from '../../shared/contexts/ThemeContext';
 
 import FleetList from '../components/FleetList';
 import Layout from '../../shared/components/Layout/Layout';
@@ -8,7 +9,6 @@ import PreLoader from '../../shared/components/PreLoader/PreLoader';
 import SearchForm from '../components/SearchForm';
 import Pagination from '../../shared/components/Pagination/Pagination';
 import SortButtons from '../components/SortButtons';
-
 
 const fleetReducer = ( state, action ) => {
     switch(action.type){
@@ -129,15 +129,18 @@ const FleetPage = () => {
     }else{
         searched = <p className='offer-counter'>we dont have any offers for you</p>
     }              
-
+    const { currentTheme, toggleTheme } = useContext(ThemeContext);
+console.log(currentTheme);
     return(
+
+
         <Layout>  
             <SearchForm onSubmitNameHandler={onSubmitNameHandler}
             onSearch={onSearch}
             onSearchClear={onSearchClear}/>
             <h1 ref={ el => ( title = el )} className='home-title'>premium car rental</h1>
             <p ref={ el => ( subtitle = el )} className='subtitle'>check our fleet</p>
-            <p ref={ el => ( line = el )} className='line'/>
+            <p ref={ el => ( line = el )} className='line'  style={{backgroundColor:currentTheme.cardBorderBottomColor}}/>
             { onSearch ? searched : mainCarList }       
             { onSearch ? searchList : mainList }      
         </Layout>

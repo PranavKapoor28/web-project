@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-
+import React, { Fragment,useContext } from 'react';
+import { ThemeContext, themes} from '../../contexts/ThemeContext';
 const Pagination = (props) => {
 
     const pageNumers = [];
@@ -7,7 +7,7 @@ const Pagination = (props) => {
     for(let i = 1; i <= Math.ceil(props.totalItems/props.itemsPerPage); i++ ){
         pageNumers.push(i)
     }
-
+    const { currentTheme, toggleTheme } = useContext(ThemeContext);
     return (
         <Fragment>
             {pageNumers.length && 
@@ -15,7 +15,7 @@ const Pagination = (props) => {
                 <p>pages</p>
                 {pageNumers.map(number => (
                     <li key={number} className='page-number'>
-                        <button onClick={() => props.pagination(number)} className='page-button'>{number}</button>
+                        <button onClick={() => props.pagination(number)} className='page-button' style={{color: currentTheme.color}}>{number}</button>
                     </li>
                 ))}
             </ul> }

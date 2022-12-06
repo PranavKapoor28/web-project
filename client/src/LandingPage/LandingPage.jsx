@@ -55,7 +55,7 @@ const LandingPage = () => {
         <Layout>
 
 <div className='bodyContent'>
-            {/* <div className='topContainer'>
+            <div className='topContainer'>
                 
             <video className='video-container' autoPlay muted loop id="video" >
             <source src={myVideo} type="video/mp4"  />
@@ -67,7 +67,7 @@ const LandingPage = () => {
                 <p ref={el => (subtitle = el)} className='sub-title'>Rent, Drive Carefree</p>
                
             </div>
-            </div> */}
+            </div>
 
         
             <div className='headingtop' style={{backgroundImage: `url(${currentTheme.imagePeecheki})`}}>

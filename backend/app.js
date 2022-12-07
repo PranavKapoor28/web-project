@@ -10,6 +10,7 @@ const usersRoutes = require("./routes/users-routes");
 const orderRoutes = require("./routes/orders-routes");
 const emailRoutes = require("./routes/email-routes");
 const stripeRoutes = require("./routes/stripe-routes");
+const adminRoutes = require("./routes/admin-routes");
 
 const app = express();
 ConnectDB();
@@ -34,6 +35,7 @@ app.use("/api/users", usersRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/emails", emailRoutes);
 app.use("/api/stripe", stripeRoutes);
+app.use("/api/admins", adminRoutes);
 
 //Connect to DB - MongoDB
 const PORT = process.env.PORT || 5001;

@@ -27,6 +27,10 @@ const addOrder = async (req, res) => {
     res.status(500).send({ msg: "Server Error" });
   }
 
+  if (user.suspended) {
+    res.status(500).send({ msg: "User is Suspended" });
+  }
+  
   if (!user) {
     return res.status(404).json({ msg: "Could not find user for this id." });
   }

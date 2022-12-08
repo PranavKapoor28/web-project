@@ -79,7 +79,7 @@ const DetailRentPage = (props) => {
     image = selected.image;
   }
   const styleme = {
-    width: "30%",
+
     paddingtop: 10,
   };
 

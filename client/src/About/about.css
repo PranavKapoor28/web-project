@@ -8,25 +8,25 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1 {
+.jumbotron h1 {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
   color: white;
   font-size: xx-large;
 }
-p {
+.container-fluid p {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
   color: white;
   font-size: larger;
 }
-h2 {
+.container-fluid h2 {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
   color: white;
   font-size: larger;
 }
-h4 {
+.container-fluid h4 {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1px;
   color: white;
@@ -57,6 +57,7 @@ h4 {
 
 .Team h1 {
   margin-bottom: 5%;
+  color: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
 

@@ -20,6 +20,7 @@ import ResetPage from "./User/pages/ResetPage";
 import PrivateRoute from "./shared/components/PrivateRoute/PrivateRoute";
 import Auth from "./User/pages/Auth";
 import Checkout from "./Checkout/Checkout";
+import About from "./About/a";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/auth/reset/:token" component={ResetForm} />
             <Route path="/auth/reset" component={ResetPage} />
             <Route path="/auth" component={Auth} />
+            <Route path="/about" component={About} />
             <Route path="/fleet/sort/:name" component={FleetSearchPage} />
             <Route path="/fleet" component={FleetPage} />
             <PrivateRoute path="/my-orders/:id" component={OrdersPage} />

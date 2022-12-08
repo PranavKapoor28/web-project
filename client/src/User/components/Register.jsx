@@ -54,7 +54,7 @@ const Register = (props) => {
 
 
     return (
-        <div className='auth-container' ref={el => ( authForm = el)}>
+        <div className='auth-container' ref={el => ( authForm = el)} style={{boxShadow:`7px 7px 7px 3px ${currentTheme.cardBorderBottomColor}`}}>
             <h3 style={{color: '#2F3C7E' }}>Registration</h3>
             <p style={{color: '#2F3C7E' }}>Before using our app, you need to create an account</p>
             <form className='auth-form' onSubmit={onHandleSubmit}>

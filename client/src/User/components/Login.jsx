@@ -47,7 +47,7 @@ const Login = (props) => {
     }, [tl])
 
     return (
-        <div className='auth-container' ref={el => ( authForm = el)}>
+        <div className='auth-container' ref={el => ( authForm = el)} style={{boxShadow:`7px 7px 7px 3px ${currentTheme.cardBorderBottomColor}`}}>
             <h3 style={{color: '#2F3C7E' }}>Log-in</h3>
             <p style={{color: '#2F3C7E' }}>enter your credentials to log-in</p>
             <form className='auth-form' onSubmit={onHandleSubmit}>

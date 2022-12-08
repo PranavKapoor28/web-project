@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 const AddAdmin = () => {
   const [creds, setcreds] = useState({
-    name: "Jainam Mehta",
-    email: "jainamm47@gmail.com",
-    password: "Jainam1234!",
+    name: "",
+    email: "",
+    password: "",
   });
 
   const navigate = useNavigate();

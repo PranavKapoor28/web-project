@@ -33,7 +33,7 @@ const AddAdmin = () => {
   return (
     <div className="bg-[#222f3e] h-[100vh] flex justify-center items-center ">
       <div className="p-5 text-white bg-[#4834d4]">
-        <div className="mb-5 text-center">Add a Car</div>
+        <div className="mb-5 text-center">Add Admin Users</div>
         <div>Name</div>
         <input
           onChange={onChange}

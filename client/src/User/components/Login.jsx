@@ -63,7 +63,8 @@ const Login = (props) => {
             onChange={onHandleChange}
             required
           />
-          {errors.email && <p className='errors'>{errors.email}</p>}
+          {errors.email && <p style={marginBottom:20px} className='errors'>{errors.email}</p>}
+
           {ValidateEmail.test(email) && (
             <p className='checked'>
               <AiOutlineCheckCircle />

@@ -6,10 +6,15 @@ const SearchForm = (props) => {
     const [ name, setName ] = useState('');
 
     const onSubmitNameHandler = (e) => {
-        const convName = name.toLocaleLowerCase()
+        const convName = name.toLocaleLowerCase();
+        const arr = convName.split(" ");
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+
+        }
         e.preventDefault();
-        
-        props.onSubmitNameHandler(convName);
+        const convName2 = arr.join(" ");
+        props.onSubmitNameHandler(convName2);
         console.log(name);
         setName('');
         

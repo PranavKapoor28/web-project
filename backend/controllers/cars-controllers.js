@@ -82,7 +82,7 @@ const getOfferCars = async (req, res) => {
 //Get car list by searched name,model or car type
 const getCarByName = async (req, res) => {
   let cars;
-  const str2 = req.params.name.charAt(0).toUpperCase() + req.params.name.slice(1);
+  const str2 = req.params.name;
   console.log("here");
   try {
     cars = await Car.find({

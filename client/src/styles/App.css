@@ -1,15 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 * {
   padding: 0;
   margin: 0;
 }
-
 html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -67,16 +69,16 @@ html {
   height: 51px;
   position: relative;
 }
-.auth-container .auth-form .input-fied input[type=text],
-.auth-container .auth-form .input-fied input[type=email],
-.auth-container .auth-form .input-fied input[type=password] {
+.auth-container .auth-form .input-fied input[type='text'],
+.auth-container .auth-form .input-fied input[type='email'],
+.auth-container .auth-form .input-fied input[type='password'] {
   width: 100%;
   padding: 10px 10px 3px 25px;
   border: none;
   outline: none;
   border-bottom: 2px solid black;
 }
-.auth-container .auth-form .input-fied input[type=submit] {
+.auth-container .auth-form .input-fied input[type='submit'] {
   font-size: 16px;
   width: 100%;
   margin-top: 30px;
@@ -92,7 +94,7 @@ html {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.auth-container .auth-form .input-fied input[type=submit]:hover {
+.auth-container .auth-form .input-fied input[type='submit']:hover {
   color: green;
   border: 2px solid green;
 }
@@ -173,7 +175,7 @@ html {
   border: none;
   background: transparent;
   font-weight: 700;
-  color: #FBEAEB;
+  color: #fbeaeb;
   cursor: pointer;
   outline: none;
 }
@@ -279,25 +281,25 @@ html {
   width: 16px;
   background: black;
   -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
-          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 
 .lds-facebook div:nth-child(1) {
   left: 8px;
   -webkit-animation-delay: -0.24s;
-          animation-delay: -0.24s;
+  animation-delay: -0.24s;
 }
 
 .lds-facebook div:nth-child(2) {
   left: 32px;
   -webkit-animation-delay: -0.12s;
-          animation-delay: -0.12s;
+  animation-delay: -0.12s;
 }
 
 .lds-facebook div:nth-child(3) {
   left: 56px;
   -webkit-animation-delay: 0;
-          animation-delay: 0;
+  animation-delay: 0;
 }
 
 @-webkit-keyframes lds-facebook {
@@ -305,7 +307,8 @@ html {
     top: 8px;
     height: 64px;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 24px;
     height: 32px;
   }
@@ -316,7 +319,8 @@ html {
     top: 8px;
     height: 64px;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 24px;
     height: 32px;
   }
@@ -370,7 +374,7 @@ html {
   text-transform: uppercase;
   font-size: 2vw;
   font-weight: 700;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .item-cars .name span {
   margin-left: 5px;
@@ -446,7 +450,7 @@ html {
     text-transform: uppercase;
     font-size: 5vw;
     font-weight: 700;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   .item-cars .name span {
     margin-left: 5px;
@@ -515,7 +519,7 @@ html {
   text-transform: uppercase;
   font-size: 45px;
   letter-spacing: 1.5px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-weight: 700;
   margin: 0%;
 }
@@ -544,7 +548,7 @@ html {
 
 .subtitle {
   text-align: center;
-  font-family: "Kalam", cursive;
+  font-family: 'Kalam', cursive;
   padding: 10px 30px;
   font-size: 28px;
   text-transform: lowercase;
@@ -580,7 +584,7 @@ html {
   margin: 80px auto 15px auto;
   font-size: 4vw;
   letter-spacing: 1.5px;
-  font-family: "Patrick Hand", cursive;
+  font-family: 'Patrick Hand', cursive;
 }
 
 .sorting-section {
@@ -643,16 +647,16 @@ html {
   text-align: center;
   width: 100%;
 }
-.search-form form input[type=text],
-.search-form form input[type=submit] {
+.search-form form input[type='text'],
+.search-form form input[type='submit'] {
   padding: 10px;
   border: 1px solid black;
   outline: none;
 }
-.search-form form input[type=text] {
+.search-form form input[type='text'] {
   width: 80%;
 }
-.search-form form input[type=submit] {
+.search-form form input[type='submit'] {
   width: 20%;
   cursor: pointer;
   background-color: transparent;
@@ -672,10 +676,10 @@ html {
   .search-form {
     width: 90%;
   }
-  .search-form form input[type=text] {
+  .search-form form input[type='text'] {
     width: 70%;
   }
-  .search-form form input[type=submit] {
+  .search-form form input[type='submit'] {
     width: 30%;
   }
   .search-form form .clear-search {
@@ -752,7 +756,7 @@ html {
   display: flex;
   flex-direction: column;
 }
-.rent-wrapper .rent-form input[type=text] {
+.rent-wrapper .rent-form input[type='text'] {
   background-color: transparent;
   padding: 15px 10px 3px 25px;
   border: none;
@@ -761,7 +765,7 @@ html {
   background-color: transparent;
   margin-bottom: 10px;
 }
-.rent-wrapper .rent-form input[type=submit] {
+.rent-wrapper .rent-form input[type='submit'] {
   font-size: 16px;
   width: 100%;
   margin-top: 30px;
@@ -980,4 +984,4 @@ html {
 .sort-arrow button span {
   font-size: 15px;
   margin-right: 10px;
-}/*# sourceMappingURL=App.css.map */
+} /*# sourceMappingURL=App.css.map */

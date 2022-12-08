@@ -40,6 +40,13 @@ const Home = () => {
         >
           Block A User
         </button>
+        <br />
+        <button
+          onClick={() => shift("/add-admin")}
+          className="bg-[#4834d4] w-64 px-10 py-3 mt-3 text-white"
+        >
+          Add Admin
+        </button>
       </div>
     </div>
   );

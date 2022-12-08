@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import AddAdmin from "./AddAdmin/AddAdmin";
 import AddCar from "./AddCar/AddCar";
 import Home from "./Home/Home";
 import HomePage from "./HomePage/HomePage";
@@ -13,6 +14,7 @@ const AuthRouter = () => {
       <Route path="/users" element={<Users />} />
       <Route path="/add-a-car" element={<AddCar />} />
       <Route path="/home" element={<Home />} />
+      <Route path="/add-admin" element={<AddAdmin />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );

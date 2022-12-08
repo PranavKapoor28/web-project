@@ -7,7 +7,6 @@ const adminSchema = new mongoose.Schema({
   password: { type: String, required: true, minlength: 6 },
   resetToken: { type: String },
   expToken: { type: Date },
-  orders: [{ type: mongoose.Types.ObjectId, required: true, ref: "Order" }],
 });
 
 module.exports = mongoose.model("Admin", adminSchema);

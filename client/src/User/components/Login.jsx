@@ -46,14 +46,14 @@ const Login = (props) => {
 
     return (
         <div className='auth-container' ref={el => ( authForm = el)}>
-            <h3>Log-in</h3>
-            <p>enter your credentials to log-in</p>
+            <h3 style={{color: "#2F3C7E"}}>Log-in</h3>
+            <p style={{color: "#2F3C7E"}}>enter your credentials to log-in</p>
             <form className='auth-form' onSubmit={onHandleSubmit}>
-                <div className='input-fied'>
+                <div className='input-fied' style={{color: "#2F3C7E"}}>
                     <input type="email" name='email' placeholder='E-mail...'
                     value={email} onChange={onHandleChange} required/>        
                     {errors.email && <p className='errors'>{errors.email}</p>}
-                    {ValidateEmail.test(email) && <p className='checked'><AiOutlineCheckCircle /></p>}
+                    {ValidateEmail.test(email) && <p className='checked'><AiOutlineCheckCircle/></p>}
                 </div>
                  <div className='input-fied'>
                     <PasswordField onHandleChange={onHandleChange}
@@ -67,13 +67,13 @@ const Login = (props) => {
                         ? <AuthButton value='Log-in'/>
                         :
                         <Fragment>
-                            <input type="submit" value='Log-in'/>
+                            <input type="submit" value='Log-in' style={{color: "#2F3C7E"}}/>
                             {errors.msg && <p className='errors'>{errors.msg}</p>}
                         </Fragment>
                     }                  
                 </div>             
             </form>
-            <p className='psw-question'><NavLink to='/auth/reset'>Forgotten password?</NavLink></p>
+            {/* <p className='psw-question'><NavLink to='/auth/reset'>Forgotten password?</NavLink></p> */}
         </div>
     )
 

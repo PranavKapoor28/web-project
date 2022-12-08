@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "../axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getCookie } from "../utils/cookie-helper";
 
 const Card = ({ userId, name, email, suspended, totalOrders, index }) => {
   const [suspension, setsuspension] = useState(suspended);
@@ -10,7 +11,12 @@ const Card = ({ userId, name, email, suspended, totalOrders, index }) => {
     try {
       setsuspension(!suspension);
       const body = { userId };
-      await axios.post("/block-user", body);
+      const cookie = getCookie("token");
+      await axios.post("/block-user", body, {
+        headers: {
+          Authorization: cookie,
+        },
+      });
       toast.success("Toggle Successfull");
     } catch (error) {
       toast.error("Please Try Again");

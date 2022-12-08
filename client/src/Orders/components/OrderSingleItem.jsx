@@ -34,6 +34,7 @@ const OrderSingleItem = (props) => {
       };
       await axios.post("/stripe", body);
       await props.onPayNowHandler();
+      await props.sendInvoiceEmail();
       toast.success("Payment Successfully Done");
     } catch (error) {
       toast.error("Payment Failed please try again");

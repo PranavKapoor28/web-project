@@ -25,6 +25,7 @@ const HomePage = () => {
       saveCookie("user", JSON.stringify(data.data));
       saveCookie("token", data.data.token);
       navigate("/home");
+      window.location.reload();
     } catch (error) {
       toast.error("Credentials are Wrong please try again");
     }

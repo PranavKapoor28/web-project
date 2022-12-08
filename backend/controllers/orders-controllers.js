@@ -24,13 +24,13 @@ const addOrder = async (req, res) => {
     user = await User.findById(customer);
   } catch (err) {
     console.errors(err.message);
-    res.status(500).send({ msg: "Server Error" });
+    return res.status(500).send({ msg: "Server Error" });
   }
 
   if (user.suspended) {
-    res.status(500).send({ msg: "User is Suspended" });
+    return res.status(500).send({ msg: "User is Suspended" });
   }
-  
+
   if (!user) {
     return res.status(404).json({ msg: "Could not find user for this id." });
   }
@@ -40,7 +40,7 @@ const addOrder = async (req, res) => {
     searchedCar = await Car.findById(car);
   } catch (err) {
     console.errors(err.message);
-    res.status(500).send({ msg: "Server Error" });
+    return res.status(500).send({ msg: "Server Error" });
   }
 
   if (!searchedCar) {
@@ -86,7 +86,7 @@ const addOrder = async (req, res) => {
       .send({ msg: "Server Error, could not create that order" });
   }
 
-  res.status(201).json({ order: order });
+  return res.status(201).json({ order: order });
 };
 
 //Get all users order

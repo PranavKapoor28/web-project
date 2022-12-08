@@ -32,8 +32,6 @@ router.post(
 router.get("/:id", ordersController.getOrderById);
 //Get all orders for user(be user id)
 router.get("/user/:id", ordersController.getUsersOrders);
-//Create PDF invoice
-router.get("/invoice/:id", ordersController.pdfInvoice);
 //Delete order
 router.delete("/:id", ordersController.deleteOrder);
 //Change price when pay now

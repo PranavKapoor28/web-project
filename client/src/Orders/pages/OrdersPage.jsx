@@ -8,7 +8,8 @@ import React, {
 import { useParams } from "react-router-dom";
 import gsap from "gsap";
 import axios from "../../axios";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import PreLoader from "../../shared/components/PreLoader/PreLoader";
 import OrdersList from "../components/OrdersList";
 import Layout from "../../shared/components/Layout/Layout";
@@ -73,6 +74,7 @@ const Orders = () => {
         dispatch({ type: "DELETE", id: orderId });
       })
       .catch((err) => {
+        toast.error("Error Occured! Please Try Again")
         setIsLoading(false);
         console.log(err);
       });
@@ -162,6 +164,7 @@ const Orders = () => {
           onInvoicePdf={onInvoicePdf}
         />
       )}
+      <ToastContainer />
     </Layout>
   );
 };

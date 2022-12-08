@@ -1,6 +1,4 @@
-const stripe = require("stripe")(
-  "sk_test_51MButaKxBMJbdAZAfl4yHd3AMrCyEkJO6XUrOPG8pch8KAQhxxcOoIV4L9E1wYhd1wYdJvNSlxhA7vfdqPiYXHWY00Z45KPWKj"
-);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 async function postCharge(req, res) {
   try {

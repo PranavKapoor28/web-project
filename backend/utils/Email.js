@@ -18,13 +18,13 @@ const sendEmail = ({
         port: 465,
         secure: true,
         auth: {
-          user: "jm@wcgcap.io",
-          pass: "dlznsazmhpvraecw",
+          user: process.env.EMAIL,
+          pass: process.env.PASS,
         },
       });
 
       const mailOptions = {
-        from: "jm@wcgcap.io",
+        from: process.env.EMAIL,
         to,
         subject: "Your Rent Incoice",
         html: `<h3>This is your Rent Invoice</h3>

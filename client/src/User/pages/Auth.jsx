@@ -7,9 +7,8 @@ import Login from '../components/Login';
 import Register from '../components/Register';
 import { AuthContext } from '../../shared/contexts/AuthContext';
 import Layout from '../../shared/components/Layout/Layout';
-
 const Auth = () => {
-
+    
     const [ toggleState, setToggleState ] = useState(false);
     const { login } = useContext(AuthContext);
     const [isLoading, setIsLoadin] = useState(false);

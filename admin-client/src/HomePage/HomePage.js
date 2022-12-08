@@ -21,7 +21,9 @@ const HomePage = () => {
   const loginHandler = async () => {
     try {
       const data = await axios.post("/login", creds);
+      console.log(data.data.token);
       saveCookie("user", JSON.stringify(data.data));
+      saveCookie("token", data.data.token);
       navigate("/home");
     } catch (error) {
       toast.error("Credentials are Wrong please try again");

@@ -89,7 +89,7 @@ const LandingPage = () => {
                     : <FleetList fleet={offers} />
             }
             <p className='offers-btn' style={{ borderBottomColor:currentTheme.cardBorderBottomColor}}><NavLink to='/fleet'  >Check our other offers</NavLink></p>
-            <p className='slogan'>Don't dream it, drive it</p>
+            <p className='slogan'>Don't dream it, drive it </p>
             <p ref={el => (line = el)} className='line' style={{backgroundColor:currentTheme.cardBorderBottomColor}}/>
             <section className='sorting-section'>
                 <CarInforCard src={coupe} alt={"coupe"} clicked={onSearchtHandler} name={'coupe'} text={'Check our coupes'} />

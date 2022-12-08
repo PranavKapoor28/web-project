@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useRef, Fragment } from 'react';
+import React, { useEffect, useState, useRef, Fragment,  useContext } from 'react';
 import axios from '../../axios';
 import gsap from 'gsap';
 import { useParams } from 'react-router-dom';
-
+import { ThemeContext, themes} from '../../shared/contexts/ThemeContext';
 import PreLoader from '../../shared/components/PreLoader/PreLoader';
 import Layout from '../../shared/components/Layout/Layout';
 import FleetList from '../components/FleetList';
@@ -52,12 +52,13 @@ const FleetSearchPage = () => {
         <span> {searched.length ===  1 ? 'offer' : 'offers'} </span>for you</p>
     }
 
-
+    const { currentTheme, toggleTheme } = useContext(ThemeContext);
+    console.log(currentTheme);
     return(
         <Layout>
-            <div className='title-search' >
-                <h1 ref={ el => ( searchTitle = el )}>don't dream it, Drive it!</h1>
-                <p className='line'/>
+            <div className='title-search'  >
+                <h1 ref={ el => ( searchTitle = el )} >don't dream it, Drive it!</h1>
+                <p className='line' style={{backgroundColor:currentTheme.cardBorderBottomColor}}/>
             </div>
             {offers}
             {

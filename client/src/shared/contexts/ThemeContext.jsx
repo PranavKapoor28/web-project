@@ -12,7 +12,8 @@ export const themes = {
        cardColor:  "rgba(215, 215, 215, 0.318)",
        cardFontColor: '#2F3C7E',
        cardBorderBottomColor:'black',
-       
+       formColor : "white",
+       formContentColor: "#2F3C7E"
     },
     dark: {
         backgroundColor: 'black',
@@ -21,7 +22,8 @@ export const themes = {
         cardColor: "white",
         cardFontColor: '#2F3C7E',
         cardBorderBottomColor:'red',
-        
+        formColor : "red",
+        formContentColor: "white"
 
     }
     

@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
 import Card from "./Card";
+import { getCookie } from "../utils/cookie-helper";
+
 const Users = () => {
   const [users, setusers] = useState([]);
   const [loading, setloading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
-      const data = await axios.get("/getUsers");
+      const cookie = getCookie("token");
+      console.log("Cookie ", cookie);
+      const data = await axios.get("/getUsers", {
+        headers: {
+          Authorization: cookie,
+        },
+      });
       console.log(data.data);
       setusers(data.data.users);
       setloading(false);

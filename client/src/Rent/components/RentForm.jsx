@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 import DateForm from './DateForm';
 import { AuthContext } from '../../shared/contexts/AuthContext';
+import { ThemeContext, themes} from '../../shared/contexts/ThemeContext';
 
 const RentForm = (props) => {
-
+    const { currentTheme, toggleTheme } = useContext(ThemeContext);
     const { userId, isLoggedIn } = useContext(AuthContext);
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
@@ -29,13 +30,13 @@ const RentForm = (props) => {
     }
 
     return(
-        <div className='rent-wrapper'>
+        <div className='rent-wrapper' style={{backgroundColor : currentTheme.formColor}} >
             <h3>Motor Vehicle Rental Form</h3>
             <p>please fill the names of the driver</p>
             <form className='rent-form' onSubmit={onHandleSubmit}>
-                <input type='text' name='firstName' value={firstName} placeholder='First Name' 
+                <input type='text' style={{color: currentTheme.formContentColor}} name='firstName' value={firstName} placeholder='First Name' 
                 required onChange={(e) => setFirstName(e.target.value)}/>
-                <input type='text' name='lastName' value={lastName} placeholder='Last Name'
+                <input type='text' style={{color: currentTheme.formContentColor }} name='lastName' value={lastName} placeholder='Last Name'
                 required onChange={(e) => setLastName(e.target.value)}/>
                 <DateForm  startDate={startDate} 
                      setStartDate={setStartDate}
@@ -43,8 +44,8 @@ const RentForm = (props) => {
                          setEndDate={setEndDate}/>
                 {
                     isLoggedIn 
-                    ? <input type='submit' value='Rent' />
-                    : <p className='back-login'><NavLink to='/auth'>Log-in</NavLink></p>
+                    ? <input type='submit' value='Rent'  />
+                    : <p className='back-login'><NavLink to='/auth' >Log-in</NavLink></p>
                 }
                 
             </form>

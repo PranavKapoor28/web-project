@@ -1,7 +1,10 @@
 import React, { Fragment, useState } from "react";
-
 import Modal from "../../shared/components/Modals/Modal";
 import DeleteWarning from "../../shared/components/DeleteWarning/DeleteWarning";
+import axios from "../../axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Stripe from "react-stripe-checkout";
 
 const OrderSingleItem = (props) => {
   const [showWarning, setShowWarning] = useState(false);
@@ -20,6 +23,26 @@ const OrderSingleItem = (props) => {
 
   const hideDeleteWarning = () => {
     setShowWarning(false);
+  };
+
+  const handleToken = async (amount, token) => {
+    try {
+      const body = {
+        email: token.email,
+        source: token.id,
+        amount: amount,
+      };
+      await axios.post("/stripe", body);
+      await props.onPayNowHandler();
+      toast.success("Payment Successfully Done");
+    } catch (error) {
+      toast.error("Payment Failed please try again");
+      console.log(error.message);
+    }
+  };
+
+  const tokenHandler = async (token) => {
+    handleToken(totalPrice * 100, token);
   };
 
   return (
@@ -42,7 +65,7 @@ const OrderSingleItem = (props) => {
         </div>
         <div className="main-order-wrapper">
           <p className="total-price">
-            Your price:<span> {totalPrice} </span>€
+            Your price:<span>{totalPrice}</span>$
           </p>
           <p className="full-name">
             {props.firstName}
@@ -62,21 +85,23 @@ const OrderSingleItem = (props) => {
           <div className="buttons">
             {!props.isPayNow ? (
               <Fragment>
-                <p onClick={props.onPayNowHandler} className="button-action">
-                  Pay now
-                </p>
-                <p onClick={props.onInvoicePdf} className="button-action">
+                {/* <p onClick={props.onPayNowHandler} className="button-action"> */}
+                <Stripe
+                  stripeKey="pk_test_51MButaKxBMJbdAZArgRSLCR7lu19N6WN0g2hngQA6e1cnLlVUvYdbDzVIMG8MPHO5YGLEBcDff8m1fkQSr7ITjCs00Zfnrumtz"
+                  token={tokenHandler}
+                >
+                  <p className="button-action">Pay Now</p>
+                </Stripe>
+                {/* <p onClick={props.onInvoicePdf} className="button-action">
                   Pay Later
-                </p>
+                </p> */}
               </Fragment>
             ) : (
               <Fragment>
-                <p onClick={props.onPayLaterHandler} className="button-action">
-                  Undo pay
-                </p>
-                <p onClick={props.sendInvoiceEmail} className="button-action">
+                <p className="button-action">Already Paid</p>
+                {/* <p onClick={props.sendInvoiceEmail} className="button-action">
                   Checkout
-                </p>
+                </p> */}
               </Fragment>
             )}
             <p onClick={showDeleteWarning} className="button-action">
@@ -85,6 +110,7 @@ const OrderSingleItem = (props) => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </Fragment>
   );
 };

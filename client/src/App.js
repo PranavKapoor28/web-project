@@ -37,7 +37,7 @@ function App() {
             <PrivateRoute path="/my-orders/:id" component={OrdersPage} />
             <Route path="/rent/:id" component={RentPage} />
             <Route to="/checkout" component={Checkout} />
-            <Redirect to="/" />
+            {/* <Redirect to="/" /> */}
           </Switch>
         </Router>
       </ThemeContextProvider>

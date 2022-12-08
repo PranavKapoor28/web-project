@@ -38,5 +38,5 @@ app.use("/api/stripe", stripeRoutes);
 app.use("/api/admins", adminRoutes);
 
 //Connect to DB - MongoDB
-const PORT = process.env.PORT || 5002;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server started at port ${PORT}`));

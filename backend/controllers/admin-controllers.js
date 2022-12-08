@@ -9,7 +9,6 @@ require("dotenv").config();
 
 const addAdmins = async (req, res) => {
   try {
-    console.log("RUNNING");
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res
@@ -23,7 +22,7 @@ const addAdmins = async (req, res) => {
     try {
       user = await AdminUser.findOne({ email });
     } catch (err) {
-      console.errors(err.message);
+      console.log(err);
       res.status(500).send({ msg: "Server Error" });
     }
 
@@ -52,8 +51,8 @@ const addAdmins = async (req, res) => {
 
     try {
       await user.save();
-    } catch {
-      console.errors(err.message);
+    } catch (err) {
+      console.log(err);
       res.status(500).send({ msg: "Server Error" });
     }
 
@@ -63,7 +62,7 @@ const addAdmins = async (req, res) => {
         expiresIn: "1y",
       });
     } catch (err) {
-      console.errors(err.message);
+      console.log(err);
       res.status(500).send({ msg: "Server Error" });
     }
 
@@ -75,7 +74,6 @@ const addAdmins = async (req, res) => {
 };
 
 const addCars = async (req, res) => {
-  console.log("RAN");
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res

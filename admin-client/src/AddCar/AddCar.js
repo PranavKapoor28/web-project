@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "../axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { getCookie } from "../utils/cookie-helper";
 
 const AddCar = () => {
   const [creds, setcreds] = useState({
@@ -24,7 +25,12 @@ const AddCar = () => {
 
   const submit = async () => {
     try {
-      const data = await axios.post("/add-car", creds);
+      const cookie = getCookie("token");
+      const data = await axios.post("/add-car", creds, {
+        headers: {
+          Authorization: cookie,
+        },
+      });
       console.log(data.data);
       toast.success("Car added successfully");
     } catch (error) {

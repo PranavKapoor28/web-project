@@ -14,7 +14,7 @@ const PasswordField = (props) => {
 
     return (
         <Fragment>
-            <div className='toggleVisibal' style={{color: "#2F3C7E"}}>
+            <div className='toggleVisibal'>
                 <input type={ unVisible ? 'password' : 'text' } name='password' value={props.value}
                 onChange={props.onHandleChange} placeholder='Password...' required/>
                 <span onClick={toggleVisibal}>{unVisible ? <i className='iconVisibility'><MdVisibilityOff /></i> : 
